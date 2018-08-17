@@ -10,10 +10,6 @@ contract('IdentityContract', (accounts) => {
     const txHash = await instance.addCustomer(accounts[1])
     const result = await instance.customers(accounts[1])
     assert.strictEqual(result.toNumber(), 1)
-    
-
-
-    //assert.strictEqual(balance.toNumber(), 10000);
   });
 
 });
