@@ -17,5 +17,13 @@ contract IdentityContract {
     customers[_customerAddress] = 1;
     return true;
   }
+
+  function hasAuth(address _customerAddress) public view returns(bool){
+    if (customers[_customerAddress] == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
